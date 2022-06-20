@@ -1,40 +1,60 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="stylesheet" href="style.css" />
-    <title>Document</title>
-  </head>
-  <body>
-    <section cid="home" class="home-container"">
-      <header class="header">
-        <img id="img1" src="bantest.png" alt="" />
-        
-        <div class="nav-links">
-          <ul class="nav-links">
-            <li>
-              <a href="#Accueil" id="Accueil" data-text="Accueil">Boutique</a>
-            </li>
-            <li>
-              <a href="#plan" id="Plan" data-text="Plan">Plan</a>
-            </li>
-            <li>
-              <a href="teamviewer.html" id="apropos" data-text="Teamviewer">Teamviewer</a>
-            </li>
-            <li>
-              <a href="#footer" id="apropos" data-text="Antivirus">Antivirus</a>
-            </li>
-            <li>
-              <a href="#footer" id="apropos" data-text="Contact">Contact</a>
-            </li>
-          </ul>
-        </div>
-        
-      </header>
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles.css">
     
-      <span class="btn-problem">Un probleme avec votre materiel informatique ?</span>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.12.0-2/js/all.min.js"></script>
+    <title>site lpi</title>
+</head>
+
+<body>
+    <section id="home" class="home-container">
+        <header id="header" class="header">
+            <img src="bantest.png" alt="le plessis informatique " class="logo">
+           
+            <ul class="nav-links">
+                <li>
+                  <a href="index.html" id="Accueil" data-text="Accueil">Boutique</a>
+                </li>
+                <li>
+                  <a href="plan.html" id="Plan" data-text="Plan">Plan</a>
+                </li>
+                <li>
+                  <a href="teamviewer.html" id="apropos" data-text="Teamviewer">Teamviewer</a>
+                </li>
+                <li>
+                  <a href="#footer" id="apropos" data-text="Antivirus">Antivirus</a>
+                </li>
+                <li>
+                  <a href="#footer" id="apropos" data-text="Contact">Contact</a>
+                </li>
+              </ul>
+            <div class="burger-container">
+                <div class="burger"></div>
+            </div>
+        </header>
+        <a href="#text" class="shiny-btn">Un probleme avec votre <br> materiel informatique ?</a>
     </section>
-    
-  </body>
+    <section class="text" id="text" >
+      <p>Le Plessis Informatique, entreprise spécialisée dans la maintenance et la vente informatique. <br>
+
+        Nous effectuons le diagnostique de vos ordinateurs (toutes marques confondues) ; de vos smartphones et tablettes, de vos imprimantes et plus encore ! <br>
+        
+        Nous intervenons sur plusieurs supports ainsi que sur la mise en réseau de vos équipements, n'hésitez pas à nous contacter pour en découvrir plus ! <br>
+        Un souci ? N'hésitez pas à nous contacter, nous pouvons intervenir à distance.*</p>
+    </section>
+    <script>
+        const burgerContainer = document.querySelector('.burger-container');
+        const navLinks = document.querySelector('.nav-links');
+
+        burgerContainer.addEventListener('click', () => {
+            burgerContainer.classList.toggle('active');
+            navLinks.classList.toggle('active');
+        })
+    </script>
+</body>
+
 </html>
